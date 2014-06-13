@@ -1,5 +1,4 @@
 .*
-.vim/autoload/
 !*.vim/
 !*.vimrc
 !.gitconfig
