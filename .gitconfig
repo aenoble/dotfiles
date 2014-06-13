@@ -1,0 +1,9 @@
+[user]
+	name = Andrew Noble
+	email = aenoble@gmail.com
+[color]
+	ui = true
+[alias]
+	ci = commit
+	lol = log --graph --oneline
+        fuckit = reset --hard
