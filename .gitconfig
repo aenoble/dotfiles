@@ -7,3 +7,5 @@
 	ci = commit
 	lol = log --graph --oneline
         fuckit = reset --hard
+[core]
+	editor = vim
