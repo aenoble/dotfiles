@@ -27,6 +27,7 @@ execute pathogen#infect()
 " ctrlp.vim - not needed but some rebindings.
 noremap <leader>p :CtrlP<CR>
 noremap <leader>vp :vsp<CR>:CtrlP<CR>
+noremap <leader>c :CtrlPTag<CR>
 
 " jinja.vim
 au BufRead,BufNewFile *.twig set filetype=jinja
