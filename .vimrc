@@ -68,6 +68,9 @@ au BufRead,BufNewFile *.twig set filetype=jinja
 autocmd FileType litcoffee runtime ftplugin/coffee.vim
 autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 
+" nerdtree
+map <C-n> :NERDTreeToggle<CR>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " I REALLY NEED TO STOP USING THE ARROW KEYS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
