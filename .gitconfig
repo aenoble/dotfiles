@@ -5,7 +5,7 @@
 	ui = true
 [alias]
 	ci = commit
-	lol = log --graph --oneline
-        fuckit = reset --hard
+  lol = log --graph --oneline --pretty=format:'%C(yellow)%h %C(white)%s (%C(dim green)%an - %C(cyan)%ad%C(white))' --date=relative
+  fuckit = reset --hard
 [core]
-	editor = vim
+	editor = /usr/bin/vim

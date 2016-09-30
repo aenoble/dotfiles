@@ -1,11 +1,30 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " General
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" pathogen.vim
-execute pathogen#infect()
-syntax on
+" Vundle
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-surround'
+
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'kien/ctrlp.vim'
+Plugin 'lambdatoast/elm.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'aenoble/vim-arduino-ano'
+Plugin 'sudar/vim-arduino-syntax'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+
+call vundle#end()
+syntax enable
 filetype plugin indent on
-set wildignore+=*/cache/*,
 
 set nu
 set ignorecase
@@ -71,6 +90,10 @@ autocmd BufNewFile,BufReadPost *.coffee setl shiftwidth=2 expandtab
 " nerdtree
 map <C-n> :NERDTreeToggle<CR>
 
+" vim-arduino-ino
+au BufRead,BufNewFile *.pde set filetype=arduino
+au BufRead,BufNewFile *.ino set filetype=arduino
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " I REALLY NEED TO STOP USING THE ARROW KEYS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -89,11 +112,11 @@ hi Search         guifg=NONE        guibg=NONE        gui=underline ctermfg=NONE
 " Change cursor shape to line when in Insert Mode
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Gnome Terminal
-"if has("autocmd")
-"    au InsertEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
-"   au InsertLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
-"   au VimLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
-"endif
+" if has("autocmd")
+"     au InsertEnter * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
+"    au InsertLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape block"
+"    au VimLeave * silent execute "!gconftool-2 --type string --set /apps/gnome-terminal/profiles/Default/cursor_shape ibeam"
+" endif
 " iTerm
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
