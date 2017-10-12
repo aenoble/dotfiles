@@ -21,6 +21,7 @@ Plugin 'aenoble/vim-arduino-ano'
 Plugin 'sudar/vim-arduino-syntax'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'leafgarland/typescript-vim'
 
 call vundle#end()
 syntax enable
