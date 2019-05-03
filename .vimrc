@@ -22,6 +22,9 @@ Plugin 'sudar/vim-arduino-syntax'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'morhetz/gruvbox'
 
 call vundle#end()
 syntax enable
@@ -76,9 +79,14 @@ cnoremap help vert help
 " Plugin Specific
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+colorscheme gruvbox
+let g:airline_theme='gruvbox'
+
+set rtp+=/usr/local/opt/fzf
+
 " ctrlp.vim - not needed but some rebindings.
-noremap <leader>p :CtrlP<CR>
-noremap <leader>vp :vsp<CR>:CtrlP<CR>
+noremap <leader>p :FZF<CR>
+noremap <leader>vp :vsp<CR>:FZF<CR>
 noremap <leader>c :CtrlPTag<CR>
 
 " jinja.vim

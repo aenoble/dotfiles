@@ -13,13 +13,16 @@ ZSH_THEME="beastmode"
 alias vimrc="vi ~/.vimrc"
 alias zshrc="vi ~/.zshrc"
 alias beastmode="vi ~/.oh-my-zsh/themes/beastmode.zsh-theme"
+alias dadjoke="curl -sH \"Accept: application/json\" https://icanhazdadjoke.com/ | cat | python -c \"from json import loads;from sys
+import stdin; print(loads(stdin.read())['joke'])\""
+alias nettest="ping -a 8.8.8.8"
+shrug() { echo "¯\_(ツ)_/¯" | pbcopy }
 alias rackemup="rackup"
 
 alias lastcommit='git log | head -1 | awk '\''{print $2}'\'''
 
 # Node path.
 export NODE_PATH=/usr/local/lib/node_modules
-alias learnyounode="node /usr/local/share/npm/bin/learnyounode"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -45,6 +48,8 @@ alias learnyounode="node /usr/local/share/npm/bin/learnyounode"
 plugins=(git battery vi-mode)
 
 source $ZSH/oh-my-zsh.sh
+
+export FZF_DEFAULT_OPTS="--preview 'head -100 {}'"
 
 # Customize to your needs...
 export PATH=/Users/andrew/bin:/usr/local/sbin:/usr/local/bin:/Users/andrew/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/andrew/.rvm/bin:/Users/andrew/.rvm/bin:/usr/local/share/npm/bin:
