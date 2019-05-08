@@ -13,11 +13,11 @@ ZSH_THEME="beastmode"
 alias vimrc="vi ~/.vimrc"
 alias zshrc="vi ~/.zshrc"
 alias beastmode="vi ~/.oh-my-zsh/themes/beastmode.zsh-theme"
-alias dadjoke="curl -sH \"Accept: application/json\" https://icanhazdadjoke.com/ | cat | python -c \"from json import loads;from sys
-import stdin; print(loads(stdin.read())['joke'])\""
+alias dadjoke="curl -sH \"Accept: application/json\" https://icanhazdadjoke.com/ | cat | python -c \"from json import loads;from sys import stdin; print(loads(stdin.read())['joke'])\""
 alias nettest="ping -a 8.8.8.8"
 shrug() { echo "¯\_(ツ)_/¯" | pbcopy }
 alias rackemup="rackup"
+alias sp="spotify"
 
 alias lastcommit='git log | head -1 | awk '\''{print $2}'\'''
 
