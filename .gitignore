@@ -2,5 +2,6 @@
 .vim
 !*.vimrc
 !.gitconfig
+!.gitignore_global
 !.zshrc
 !.ctags

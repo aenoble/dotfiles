@@ -9,3 +9,4 @@
   fuckit = reset --hard
 [core]
 	editor = /usr/bin/vim
+	excludesfile = /Users/andrew/.gitignore_global
