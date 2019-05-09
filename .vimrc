@@ -38,6 +38,10 @@ set hlsearch
 set cursorline
 set t_Co=256 "256 Colours
 set textwidth=79
+" Not sure why I have to do this but my Backspace just randomly stopped working
+" and I had to include this.
+" It is 'bs'.
+set bs=2
 
 " ================ Indentation ======================
 set autoindent
