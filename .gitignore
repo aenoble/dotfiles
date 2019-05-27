@@ -5,3 +5,4 @@
 !.gitignore_global
 !.zshrc
 !.ctags
+!.tmux.conf
