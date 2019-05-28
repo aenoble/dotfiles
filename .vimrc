@@ -88,9 +88,9 @@ let g:airline_theme='gruvbox'
 
 set rtp+=/usr/local/opt/fzf
 
-" ctrlp.vim - not needed but some rebindings.
 noremap <leader>p :FZF<CR>
 noremap <leader>vp :vsp<CR>:FZF<CR>
+" ctrlp.vim - not needed but some rebindings.
 noremap <leader>c :CtrlPTag<CR>
 
 " jinja.vim
