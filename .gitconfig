@@ -10,4 +10,4 @@
 	please = push --force-with-lease
 [core]
 	editor = /usr/bin/vim
-	excludesfile = ~/gitignore_global
+	excludesfile = ~/.gitignore_global
