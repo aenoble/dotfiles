@@ -7,6 +7,8 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="beastmode"
 
+alias fuckzoom="kill -9 $(lsof -ti :19421) && rm -rf ~/.zoomus && sudo defaults write /Library/Preferences/us.zoom.config.plist ZDisableVideo 1"
+
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -52,7 +54,12 @@ source $ZSH/oh-my-zsh.sh
 export FZF_DEFAULT_OPTS="--preview 'head -100 {}'"
 
 # Customize to your needs...
-export PATH=/Users/andrew/bin:/usr/local/sbin:/usr/local/bin:/Users/andrew/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/andrew/.rvm/bin:/Users/andrew/.rvm/bin:/usr/local/share/npm/bin:
+
+#php
+export PATH="/usr/local/Cellar/php/7.3.11/bin"
+export PATH="$PATH:$HOME/.composer/vendor/bin"
+
+export PATH="$PATH:/Users/andrew/bin:/usr/local/sbin:/usr/local/bin:/Users/andrew/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin:/Users/andrew/.rvm/bin:/Users/andrew/.rvm/bin:/usr/local/share/npm/bin:"
 
 #pow
 PATH=$PATH:/Users/andrew/.rvm/gems/ruby-2.3.1/bin
@@ -65,5 +72,24 @@ export PATH="$HOME/.yarn/bin:$PATH"
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval $(thefuck --alias)
 
-#php
-export PATH="$PATH:$HOME/.composer/vendor/bin"
+
+#rust
+export PATH="$PATH:$HOME/.cargo/bin"
+export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
+
+# OSX Enable/Disable Wifi
+alias wifion="networksetup -setairportpower en0 on"
+alias wifioff="networksetup -setairportpower en0 off"
+alias wifistatus="networksetup -getairportpower en0"
+alias onandoff="toggleWifi && toggleWifi"
+
+function toggleWifi() {
+
+  if [[ $(wifistatus) == "Wi-Fi Power (en0): On" ]]; then
+    wifioff
+    print -P "%BDisabled Wifi.%b"
+  else
+    wifion
+    print -P "%BEnabled Wifi.%b"
+  fi
+}

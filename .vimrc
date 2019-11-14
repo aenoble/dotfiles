@@ -11,11 +11,14 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-commentary'
 
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'derekwyatt/vim-scala'
 Plugin 'kien/ctrlp.vim'
 Plugin 'lambdatoast/elm.vim'
+Plugin 'StanAngeloff/php.vim'
+Plugin 'vim-vdebug/vdebug'
 Plugin 'posva/vim-vue'
 Plugin 'scrooloose/nerdtree'
 Plugin 'aenoble/vim-arduino-ano'
@@ -26,6 +29,8 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'morhetz/gruvbox'
+Plugin 'janko/vim-test'
+Plugin 'junegunn/fzf.vim'
 
 call vundle#end()
 syntax enable
@@ -80,6 +85,9 @@ noremap <C-n> :tabn<CR>
 noremap <C-p> :tabp<CR>
 cnoremap help vert help
 
+" format JSON files.
+noremap <leader>j :%!python -m json.tool<cr>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Plugin Specific
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -89,8 +97,8 @@ let g:airline_theme='gruvbox'
 
 set rtp+=/usr/local/opt/fzf
 
-noremap <leader>p :FZF<CR>
-noremap <leader>vp :vsp<CR>:FZF<CR>
+noremap <leader>p :GFiles<CR>
+noremap <leader>vp :vsp<CR>:GFiles<CR>
 " ctrlp.vim - not needed but some rebindings.
 noremap <leader>c :CtrlPTag<CR>
 
@@ -107,6 +115,13 @@ map <C-n> :NERDTreeToggle<CR>
 " vim-arduino-ino
 au BufRead,BufNewFile *.pde set filetype=arduino
 au BufRead,BufNewFile *.ino set filetype=arduino
+
+" vim-test
+let g:test#javascript#jest#executable = 'yarn run vue-cli-service test:unit'
+let g:test#javascript#jest#package_name = '@vue/cli-plugin-unit-jest'
+noremap <leader>tn :TestNearest<CR>
+noremap <leader>tf :TestFile<CR>
+noremap <leader>ts :TestSuite<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " I REALLY NEED TO STOP USING THE ARROW KEYS
@@ -149,3 +164,4 @@ function! InsertTabWrapper()
 endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 noremap <s-tab> <c-n>
+
