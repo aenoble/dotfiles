@@ -44,3 +44,4 @@ tags
 public/packs/
 *.log
 .vscode
+.tool-versions
