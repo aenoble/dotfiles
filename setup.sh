@@ -2,7 +2,7 @@
 
 # install Homebrew
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-brew install htop fzf asdf tmux coreutils findutils gnu-tar gnu-sed gawk gnutls gnu-indent gnu-getopt grep
+brew install ctags htop fzf asdf tmux coreutils findutils gnu-tar gnu-sed gawk gnutls gnu-indent gnu-getopt grep
 
 # FZF key bindings and fuzzy completion:
 $(brew --prefix)/opt/fzf/install
