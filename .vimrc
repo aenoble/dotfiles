@@ -91,8 +91,8 @@ noremap <leader>j :%!python -m json.tool<cr>
 " Plugin Specific
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-colorscheme gruvbox
-let g:airline_theme='gruvbox'
+" colorscheme gruvbox
+" let g:airline_theme='gruvbox'
 
 set rtp+=/usr/local/opt/fzf
 
