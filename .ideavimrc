@@ -1,0 +1,9 @@
+Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'terryma/vim-multiple-cursors'
+
+map <C-g> <A-n>
+map <C-x> <A-x>
+map <C-p> <A-p>
+map g<C-n> g<A-n>

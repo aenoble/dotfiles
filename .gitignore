@@ -1,6 +1,7 @@
 .*
 .vim
 !*.vimrc
+!.ideavimrc
 !.gitconfig
 !.gitignore_global
 !.zshrc
