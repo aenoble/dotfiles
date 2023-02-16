@@ -1,3 +1,4 @@
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -15,7 +16,7 @@ alias fuckzoom="kill -9 $(lsof -ti :19421) && rm -rf ~/.zoomus && sudo defaults 
 alias vimrc="vi ~/.vimrc"
 alias zshrc="vi ~/.zshrc"
 alias beastmode="vi ~/.oh-my-zsh/themes/beastmode.zsh-theme"
-alias dadjoke="curl -sH \"Accept: application/json\" https://icanhazdadjoke.com/ | cat | python -c \"from json import loads;from sys import stdin; print(loads(stdin.read())['joke'])\""
+alias dadjoke="curl -sH \"Accept: application/json\" https://icanhazdadjoke.com/ | cat | python3 -c \"from json import loads;from sys import stdin; print(loads(stdin.read())['joke'])\""
 alias nettest="ping -a 8.8.8.8"
 shrug() { echo "¯\_(ツ)_/¯" | pbcopy }
 alias rackemup="rackup"
